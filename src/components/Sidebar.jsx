@@ -4,19 +4,19 @@ const NAV = [
   {
     label: 'Overview',
     items: [
-      { to: '/',           label: 'Dashboard' },
-      { to: '/engineers',  label: 'Engineers' },
+      { to: '/',          label: 'Dashboard' },
+      { to: '/engineers', label: 'Employees' },
     ],
   },
   {
     label: 'Modules',
     items: [
-      { to: '/hull',       label: 'Hull Outfitting' },
-      { to: '/kpi',        label: 'Performance',      badge: '3' },
-      { to: '/matrix',     label: 'Skills Matrix' },
-      { to: '/pdp',        label: 'Development Plan' },
-      { to: '/legal',      label: 'HR Legal' },
-      { to: '/timesheet',  label: 'Timesheet' },
+      { to: '/talent',    label: 'Talent Management' },
+      { to: '/kpi',       label: 'Performance & KPI', badge: '3' },
+      { to: '/legal',     label: 'HR Legal & Compliance' },
+      { to: '/capacity',  label: 'Time & Capacity' },
+      { to: '/projects',  label: 'Projects & Coordination' },
+      { to: '/reports',   label: 'Reporting & Analytics' },
     ],
   },
 ]
@@ -26,7 +26,7 @@ export default function Sidebar() {
     <aside className="w-52 flex-shrink-0 bg-white border-r border-slate-200 flex flex-col overflow-y-auto py-3 px-2.5">
       {NAV.map(group => (
         <div key={group.label}>
-          <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest px-2.5 pt-3 pb-1 font-mono">
+          <div className="text-xs font-bold text-slate-500 uppercase tracking-widest px-2.5 pt-3 pb-1 font-mono">
             {group.label}
           </div>
           {group.items.map(item => (
